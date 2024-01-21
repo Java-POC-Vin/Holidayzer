@@ -29,4 +29,15 @@ public class Holidayzer {
             System.out.println(entry.getKey() + " é feriado de: " + entry.getValue());
     }
 
+    public void isItHoliday(String date) {
+        date = date.replace("/", "-");
+
+        String holidayName = holidays.get(date);
+
+        if (holidayName == null) {
+            System.out.println("Dia " + date + " não é feriado 😢");
+        } else {
+            System.out.println("Dia " + date + " é " + holidayName + "! 🎉");
+        }
+    }
 }
